@@ -30,17 +30,21 @@ export async function fetchNews({
 
     const data = (await res.json()) as NewsApiResponse
 
-    // Нормализация ссылок на изображения
+    // Нормализация ссылок: убираем домен и начальный сегмент (assets/static)
     data.news = data.news.map((item) => ({
         ...item,
         cover: {
             ...item.cover,
-            images: item.cover.images.map((img) => ({
-                s: img.s.replace(/https?:\/\/[^/]+/, ""),
-                m: img.m.replace(/https?:\/\/[^/]+/, ""),
-                l: img.l.replace(/https?:\/\/[^/]+/, ""),
-                hd: img.hd.replace(/https?:\/\/[^/]+/, "")
-            }))
+            images: item.cover.images.map((img) => {
+                const normalize = (url: string) =>
+                    url.replace(/https?:\/\/[^/]+\/(assets|static)\//, "/")
+                return {
+                    s: normalize(img.s),
+                    m: normalize(img.m),
+                    l: normalize(img.l),
+                    hd: normalize(img.hd)
+                }
+            })
         }
     }))
 

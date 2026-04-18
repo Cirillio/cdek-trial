@@ -28,8 +28,8 @@ function App() {
         <div className="bg-accent flex min-h-screen flex-col gap-5.75">
             <Header />
             <div className="w-full sm:px-5.75">
-                <div className="app-container mx-auto flex w-full gap-3.5 rounded-t-3xl bg-neutral-200 p-3.5 max-sm:flex-col">
-                    <aside className="flex w-full max-w-xl min-w-0 flex-col gap-3.5">
+                <div className="app-container mx-auto flex w-full gap-3.5 rounded-t-3xl bg-neutral-200 p-3.5 max-lg:flex-col">
+                    <aside className="flex w-full max-w-xl min-w-0 flex-col gap-3.5 max-lg:mx-auto">
                         <section>
                             <Card className="shadow-primary/10 flex items-center gap-3.5 shadow-xl">
                                 <div className="to-primary from-primary/25 flex items-center justify-center rounded-full bg-linear-to-br p-3.5">
@@ -108,8 +108,8 @@ function App() {
                         </section>
                     </aside>
 
-                    <main className="r flex w-full flex-col gap-3.5">
-                        <section className="grid grid-cols-2 gap-3.5 sm:grid-cols-4">
+                    <main className="flex w-full flex-col gap-3.5 max-lg:mx-auto sm:max-w-xl lg:max-w-full">
+                        <section className="grid grid-cols-2 gap-3.5 md:grid-cols-4">
                             <Skeleton className="w-ful h-40 rounded-xl bg-white" />
                             <Skeleton className="w-ful h-40 rounded-xl bg-white" />
                             <Skeleton className="w-ful h-40 rounded-xl bg-white" />

@@ -1,5 +1,7 @@
 import { IconEye, IconThumbUp } from "@tabler/icons-react"
 import type { INewsCardProps } from "../news.types"
+import { Badge } from "../../../components/badge"
+import { formatIsoDate } from "../../../lib/DateFormatter"
 
 export function NewsCardStandart({ newsItem, isFirst }: INewsCardProps) {
     return (
@@ -10,7 +12,11 @@ export function NewsCardStandart({ newsItem, isFirst }: INewsCardProps) {
             <div className="flex flex-col gap-3.5">
                 <div>
                     <span className="text-foreground-secondary text-base font-normal">
-                        {newsItem.publishedAt}
+                        {formatIsoDate({
+                            isoString: newsItem.publishedAt,
+                            locale: "ru-RU",
+                            options: { timeZone: "UTC", formatMode: "dateTime" }
+                        }).replace(/в /, "")}
                     </span>
                     <a
                         href={"/news/" + newsItem.id}
@@ -25,20 +31,20 @@ export function NewsCardStandart({ newsItem, isFirst }: INewsCardProps) {
                 <div className="mt-auto flex items-center justify-between">
                     <div className="flex items-center gap-1.75 text-xs">
                         {newsItem.directions.map((dir) => (
-                            <span
+                            <Badge
+                                key={dir.id}
                                 title={"Направление: " + dir.name}
-                                className="bg-secondary rounded-lg px-1.75 py-1"
-                            >
-                                {dir.name}
-                            </span>
+                                text={dir.name}
+                                color="secondary"
+                            />
                         ))}
                         {newsItem.rubrics.map((rubric) => (
-                            <span
+                            <Badge
+                                key={rubric.id}
                                 title={"Рубрика: " + rubric.name}
-                                className="bg-info-bg text-info rounded-lg px-1.75 py-1"
-                            >
-                                {rubric.name}
-                            </span>
+                                text={rubric.name}
+                                color="info"
+                            />
                         ))}
                     </div>
                     <div className="flex items-center gap-1.75 text-sm">

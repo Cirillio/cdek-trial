@@ -1,13 +1,13 @@
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsThin.ttf") format("truetype");
+    src: url("./fonts/TTFellowsThin.ttf") format("truetype");
     font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsThinItalic.ttf") format("truetype");
+    src: url("./fonts/TTFellowsThinItalic.ttf") format("truetype");
     font-weight: 100;
     font-style: italic;
     font-display: swap;
@@ -15,14 +15,14 @@
 
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsExtraLight.ttf") format("truetype");
+    src: url("./fonts/TTFellowsExtraLight.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsExtraLightItalic.ttf") format("truetype");
+    src: url("./fonts/TTFellowsExtraLightItalic.ttf") format("truetype");
     font-weight: 200;
     font-style: italic;
     font-display: swap;
@@ -30,14 +30,14 @@
 
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsLight.ttf") format("truetype");
+    src: url("./fonts/TTFellowsLight.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsLightItalic.ttf") format("truetype");
+    src: url("./fonts/TTFellowsLightItalic.ttf") format("truetype");
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -45,14 +45,14 @@
 
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsRegular.ttf") format("truetype");
+    src: url("./fonts/TTFellowsRegular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsItalic.ttf") format("truetype");
+    src: url("./fonts/TTFellowsItalic.ttf") format("truetype");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -60,14 +60,14 @@
 
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsMedium.ttf") format("truetype");
+    src: url("./fonts/TTFellowsMedium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsMediumItalic.ttf") format("truetype");
+    src: url("./fonts/TTFellowsMediumItalic.ttf") format("truetype");
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -75,14 +75,14 @@
 
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsDemiBold.ttf") format("truetype");
+    src: url("./fonts/TTFellowsDemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsDemiBoldItalic.ttf") format("truetype");
+    src: url("./fonts/TTFellowsDemiBoldItalic.ttf") format("truetype");
     font-weight: 600;
     font-style: italic;
     font-display: swap;
@@ -90,14 +90,14 @@
 
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsBold.ttf") format("truetype");
+    src: url("./fonts/TTFellowsBold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsBoldItalic.ttf") format("truetype");
+    src: url("./fonts/TTFellowsBoldItalic.ttf") format("truetype");
     font-weight: 700;
     font-style: italic;
     font-display: swap;
@@ -105,14 +105,14 @@
 
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsExtraBold.ttf") format("truetype");
+    src: url("./fonts/TTFellowsExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsExtraBoldItalic.ttf") format("truetype");
+    src: url("./fonts/TTFellowsExtraBoldItalic.ttf") format("truetype");
     font-weight: 800;
     font-style: italic;
     font-display: swap;
@@ -120,14 +120,14 @@
 
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsBlack.ttf") format("truetype");
+    src: url("./fonts/TTFellowsBlack.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "TT Fellows";
-    src: url("/src/assets/fonts/TTFellowsBlackItalic.ttf") format("truetype");
+    src: url("./fonts/TTFellowsBlackItalic.ttf") format("truetype");
     font-weight: 900;
     font-style: italic;
     font-display: swap;
@@ -135,7 +135,7 @@
 
 @font-face {
     font-family: "TT Fellows Variable";
-    src: url("/src/assets/fonts/TTFellowsVariable.ttf") format("truetype-variations");
+    src: url("./fonts/TTFellowsVariable.ttf") format("truetype");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;

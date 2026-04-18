@@ -20,10 +20,10 @@ export interface INewsWidgetProps {
     minDatePublication: string
     minDateType: "lastDate" | "lastNews"
     onRetry?: () => void
-    onNext?: () => void
-    onPrev?: () => void
-    canNext?: boolean
-    canPrev?: boolean
+    onNext: () => void
+    onPrev: () => void
+    canNext: boolean
+    canPrev: boolean
 }
 
 export function NewsWidget({

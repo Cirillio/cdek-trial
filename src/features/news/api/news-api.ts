@@ -30,14 +30,19 @@ export async function fetchNews({
 
     const data = (await res.json()) as NewsApiResponse
 
-    // Нормализация ссылок: убираем домен и начальный сегмент (assets/static)
     data.news = data.news.map((item) => ({
         ...item,
         cover: {
             ...item.cover,
             images: item.cover.images.map((img) => {
-                const normalize = (url: string) =>
-                    url.replace(/https?:\/\/[^/]+\/(assets|static)\//, "/")
+                const normalize = (url: string) => {
+                    if (!url) return ""
+                    // 1. Убираем протокол и домен (например, http://...:5000)
+                    let path = url.replace(/^https?:\/\/[^/]+/, "")
+                    // 2. Убираем префиксы /assets/ или /static/, если они есть в начале
+                    path = path.replace(/^\/(assets|static)\//, "/")
+                    return path
+                }
                 return {
                     s: normalize(img.s),
                     m: normalize(img.m),

@@ -12,12 +12,7 @@ export function NewsCardStandart({ newsItem, isFirst, className }: INewsCardProp
         >
             <LazyPicture
                 className={`flex h-32 w-full min-w-0 items-center justify-center overflow-hidden rounded-xl sm:w-46 ${isFirst ? "" : "max-sm:hidden"}`}
-                images={{
-                    s: PUBLIC_URL + newsItem.cover.images[0].s,
-                    m: PUBLIC_URL + newsItem.cover.images[0].m,
-                    l: PUBLIC_URL + newsItem.cover.images[0].l,
-                    hd: PUBLIC_URL + newsItem.cover.images[0].hd
-                }}
+                images={newsItem.cover.images[0]}
                 srcRoot={PUBLIC_URL}
                 alt={newsItem.title}
             />

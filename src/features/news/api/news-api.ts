@@ -28,5 +28,21 @@ export async function fetchNews({
         throw new Error(`Ошибка сервера: ${res.status}`)
     }
 
-    return res.json() as FetchNewsReturn
+    const data = (await res.json()) as NewsApiResponse
+
+    // Нормализация ссылок на изображения
+    data.news = data.news.map((item) => ({
+        ...item,
+        cover: {
+            ...item.cover,
+            images: item.cover.images.map((img) => ({
+                s: img.s.replace(/https?:\/\/[^/]+/, ""),
+                m: img.m.replace(/https?:\/\/[^/]+/, ""),
+                l: img.l.replace(/https?:\/\/[^/]+/, ""),
+                hd: img.hd.replace(/https?:\/\/[^/]+/, "")
+            }))
+        }
+    }))
+
+    return data
 }

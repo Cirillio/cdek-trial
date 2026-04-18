@@ -11,12 +11,7 @@ export function NewsCardAccent({ newsItem, isFirst, className }: INewsCardProps)
         <article className={`flex flex-col gap-[3.5px] ${className}`}>
             <LazyPicture
                 className={`flex h-40 w-full items-center justify-center overflow-hidden rounded-xl ${isFirst ? "" : "hidden"}`}
-                images={{
-                    s: PUBLIC_URL + newsItem.cover.images[0].s,
-                    m: PUBLIC_URL + newsItem.cover.images[0].m,
-                    l: PUBLIC_URL + newsItem.cover.images[0].l,
-                    hd: PUBLIC_URL + newsItem.cover.images[0].hd
-                }}
+                images={newsItem.cover.images[0]}
                 srcRoot={PUBLIC_URL}
                 alt={newsItem.title}
             />

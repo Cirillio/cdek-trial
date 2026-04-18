@@ -15,6 +15,13 @@ export function LazyPicture({ images, alt = "", className = "", srcRoot = "" }: 
     const [isLoaded, setIsLoaded] = useState(false)
     const [hasError, setHasError] = useState(false)
 
+    //  функция для формирования чистого пути без двойных слешей
+    const getPath = (img: string) => {
+        const cleanRoot = srcRoot.endsWith("/") ? srcRoot.slice(0, -1) : srcRoot
+        const cleanImg = img.startsWith("/") ? img : `/${img}`
+        return cleanRoot + cleanImg
+    }
+
     return (
         <div className={`relative ${className}`}>
             {!isLoaded && !hasError && (
@@ -30,10 +37,11 @@ export function LazyPicture({ images, alt = "", className = "", srcRoot = "" }: 
 
             {!hasError && (
                 <picture className="size-full">
-                    <source media="(max-width: 1439px)" srcSet={images.m} />
-                    <source media="(min-width: 1440px)" srcSet={images.l} />
+                    <source media="(max-width: 640px)" srcSet={getPath(images.s)} />
+                    <source media="(max-width: 1024px)" srcSet={getPath(images.m)} />
+                    <source media="(min-width: 1025px)" srcSet={getPath(images.l)} />
                     <img
-                        src={srcRoot + "/" + images.m}
+                        src={getPath(images.m)}
                         alt={alt}
                         loading="lazy"
                         decoding="async"

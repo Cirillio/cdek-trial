@@ -3,6 +3,7 @@ export type NewsWidgetType = "standart" | "accent"
 export interface INewsCardProps {
     newsItem: NewsItem
     isFirst: boolean
+    className?: string
 }
 
 export type CoverType = "gallery" | "carousel"

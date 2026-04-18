@@ -3,9 +3,8 @@ import { Skeleton } from "../../../components/skeleton"
 export function NewsCardAccentSkeleton({ isFirst }: { isFirst?: boolean }) {
     return (
         <div className="flex flex-col gap-[3.5px]">
-            <Skeleton className={`h-40 w-full rounded-xl ${isFirst ? "" : "max-sm:hidden"}`} />
+            <Skeleton className={`h-40 w-full rounded-xl ${isFirst ? "" : "hidden"}`} />
             <div className="mt-1.75 space-y-2">
-                <Skeleton className="h-5 w-24 rounded-full" />
                 <div className="space-y-1">
                     <Skeleton className="h-6 w-full" />
                     <Skeleton className="h-6 w-3/4" />

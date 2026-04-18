@@ -3,9 +3,11 @@ import type { INewsCardProps } from "../news.types"
 import { Badge } from "../../../components/badge"
 import { formatIsoDate } from "../../../lib/DateFormatter"
 
-export function NewsCardStandart({ newsItem, isFirst }: INewsCardProps) {
+export function NewsCardStandart({ newsItem, isFirst, className }: INewsCardProps) {
     return (
-        <article className="grid grid-cols-[auto_1fr] gap-3.5 max-sm:flex max-sm:flex-col">
+        <article
+            className={`grid grid-cols-[auto_1fr] gap-3.5 max-sm:flex max-sm:flex-col ${className}`}
+        >
             <picture
                 className={`bg-secondary flex h-32 w-full items-center justify-center rounded-xl sm:w-46 ${isFirst ? "" : "max-sm:hidden"}`}
             ></picture>
@@ -28,7 +30,7 @@ export function NewsCardStandart({ newsItem, isFirst }: INewsCardProps) {
                         {newsItem.title}
                     </a>
                 </div>
-                <div className="mt-auto flex items-center justify-between">
+                <div className="mt-auto flex flex-wrap items-center justify-between gap-1.75">
                     <div className="flex items-center gap-1.75 text-xs">
                         {newsItem.directions.map((dir) => (
                             <Badge
@@ -47,7 +49,7 @@ export function NewsCardStandart({ newsItem, isFirst }: INewsCardProps) {
                             />
                         ))}
                     </div>
-                    <div className="flex items-center gap-1.75 text-sm">
+                    <div className="ml-auto flex items-center gap-1.75 text-sm">
                         <div
                             title={"Лайки: " + newsItem.likeCount}
                             className="text-foreground-secondary flex items-center gap-0.75"

@@ -9,8 +9,7 @@ export function NewsCardStandartSkeleton({ isFirst }: { isFirst?: boolean }) {
             <div className="flex flex-col gap-3.5 py-1">
                 <div className="space-y-2">
                     <Skeleton className="h-5 w-24" />
-                    <Skeleton className="h-6 w-full" />
-                    <Skeleton className="h-6 w-2/3" />
+                    <Skeleton className="h-8 w-full" />
                 </div>
                 <div className="mt-auto flex items-center justify-between">
                     <div className="flex items-center gap-1.75">

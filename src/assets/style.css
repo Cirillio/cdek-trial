@@ -1,8 +1,10 @@
 @import "tailwindcss";
 @import "./fonts.css";
+@import "./animations.css";
 
 :root {
     --font-tt-fellows: "TT Fellows Variable", system-ui, sans-serif;
+    --header-height: 4rem;
 }
 
 @theme {
@@ -14,6 +16,17 @@
     --color-warning-bg: #fddeaa;
     --color-secondary: #e2e2e4;
     --color-foreground-secondary: #85888e;
+    --color-accent: #16181c;
+}
+
+@layer utilities {
+    .app-container {
+        @apply max-w-[1660px];
+    }
+
+    .h-header {
+        @apply h-(--header-height);
+    }
 }
 
 body {

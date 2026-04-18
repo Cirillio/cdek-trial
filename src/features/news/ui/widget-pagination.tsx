@@ -24,7 +24,7 @@ export function NewsWidgetPagination({
                 type="button"
                 onClick={onPrev}
                 disabled={!canPrev || isLoading}
-                className="hover:bg-secondary disabled:bg-secondary/50 active:bg-secondary rounded-md p-1 transition active:scale-98 disabled:opacity-50"
+                className="hover:bg-secondary disabled:bg-secondary/50 active:bg-secondary rounded-lg p-1 transition active:scale-98 disabled:opacity-50"
             >
                 <IconArrowLeft size={22} />
             </button>
@@ -33,7 +33,7 @@ export function NewsWidgetPagination({
                 type="button"
                 onClick={onNext}
                 disabled={!canNext || isLoading}
-                className="hover:bg-secondary disabled:bg-secondary/50 active:bg-secondary rounded-md p-1 transition active:scale-98 disabled:opacity-50"
+                className="hover:bg-secondary disabled:bg-secondary/50 active:bg-secondary rounded-lg p-1 transition active:scale-98 disabled:opacity-50"
             >
                 <IconArrowRight size={22} />
             </button>

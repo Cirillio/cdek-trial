@@ -21,7 +21,7 @@ export function Badge({ icon: Icon, title, text, className, color = "primary" }:
     return (
         <span
             title={title}
-            className={`${BADGE_COLOR_MAP[color]} inline-flex items-center rounded-lg text-xs ${className} ${text ? "px-1.75 py-1" : Icon ? "p-1" : ""}`}
+            className={`${BADGE_COLOR_MAP[color]} inline-flex shrink-0 items-center rounded-lg text-xs ${className} ${text ? "px-1.75 py-1" : Icon ? "p-1" : ""}`}
         >
             {Icon && <Icon className="mr-1 inline-block" size={12} />} {text}
         </span>

@@ -1,0 +1,19 @@
+@theme {
+    --animate-fade-in: fade-in 0.4s ease-in-out forwards;
+
+    @keyframes fade-in {
+        0% {
+            transform: translateY(0.5rem);
+            opacity: 0;
+        }
+        30% {
+            transform: translateY(0.4rem);
+            opacity: 0.3;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

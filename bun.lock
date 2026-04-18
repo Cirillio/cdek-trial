@@ -5,6 +5,7 @@
     "": {
       "name": "cdek-trial",
       "dependencies": {
+        "@js-temporal/polyfill": "^0.5.1",
         "@tabler/icons-react": "^3.41.1",
         "@tailwindcss/vite": "^4.2.2",
         "@tanstack/react-query": "^5.99.0",

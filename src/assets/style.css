@@ -4,6 +4,7 @@
 
 :root {
     --font-tt-fellows: "TT Fellows Variable", system-ui, sans-serif;
+    --header-height: 4rem;
 }
 
 @theme {
@@ -21,6 +22,10 @@
 @layer utilities {
     .app-container {
         @apply max-w-[1660px];
+    }
+
+    .h-header {
+        @apply h-(--header-height);
     }
 }
 

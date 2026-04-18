@@ -5,12 +5,18 @@ export interface FetchNewsParams {
     category: string
     page: number
     perPage: number
+    endpoint?: "short" | "empty"
 }
 
 type FetchNewsReturn = Promise<NewsApiResponse>
 
-export async function fetchNews({ category, page, perPage }: FetchNewsParams): FetchNewsReturn {
-    const url = `${API_BASE}/news/feed/${category}/short?page=${page}&perPage=${perPage}`
+export async function fetchNews({
+    category,
+    page,
+    perPage,
+    endpoint = "short"
+}: FetchNewsParams): FetchNewsReturn {
+    const url = `${API_BASE}/news/feed/${category}/${endpoint}?page=${page}&perPage=${perPage}`
     const res: Response = await fetch(url, {
         method: "GET",
         headers: {

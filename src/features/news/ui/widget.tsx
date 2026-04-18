@@ -18,7 +18,7 @@ export interface INewsWidgetProps {
     widgetType: "accent" | "standart"
     widgetTitle: string
     minDatePublication: string
-    minDateType: "today" | "lastNews"
+    minDateType: "lastDate" | "lastNews"
     onRetry?: () => void
     onNext?: () => void
     onPrev?: () => void
@@ -46,7 +46,7 @@ export function NewsWidget({
                 <div>
                     <h2 className="mb-1.75 text-2xl font-semibold">{widgetTitle}</h2>
                     <span className="text-foreground-secondary text-sm font-normal">
-                        {minDateType === "today"
+                        {minDateType === "lastDate"
                             ? formatIsoDate({
                                   isoString: minDatePublication,
                                   locale: "ru-RU",

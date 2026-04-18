@@ -1,3 +1,5 @@
+import type { CoverImage } from "../../types/core.types"
+
 export type NewsWidgetType = "standart" | "accent"
 
 export interface INewsCardProps {
@@ -7,13 +9,6 @@ export interface INewsCardProps {
 }
 
 export type CoverType = "gallery" | "carousel"
-
-export interface CoverImage {
-    hd: string
-    l: string
-    m: string
-    s: string
-}
 
 export interface Cover {
     images: CoverImage[]

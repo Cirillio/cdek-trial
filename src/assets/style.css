@@ -1,1 +1,29 @@
 @import "tailwindcss";
+@import "./fonts.css";
+
+:root {
+    --font-tt-fellows: "TT Fellows Variable", system-ui, sans-serif;
+}
+
+@theme {
+    --font-family-tt: var(--font-tt-fellows);
+    --color-primary: #62b34a;
+    --color-info: #0e2a45;
+    --color-info-bg: #aad7fb;
+    --color-warning: #4f3709;
+    --color-warning-bg: #fddeaa;
+    --color-secondary: #e2e2e4;
+    --color-foreground-secondary: #85888e;
+}
+
+body {
+    font-family: var(--font-tt-fellows);
+}
+
+button {
+    cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+    }
+}

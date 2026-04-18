@@ -7,6 +7,7 @@ export interface UseNewsWidgetParams {
     category: string
     startPage?: number
     perPage?: number
+    queryKey?: string[]
     endpoint?: "short" | "empty"
 }
 
@@ -26,12 +27,13 @@ export function useNewsWidget({
     category,
     startPage = 1,
     perPage = 3,
+    queryKey,
     endpoint = "short"
 }: UseNewsWidgetParams): UseNewsWidgetReturn {
     const [page, setPage] = useState<number>(startPage)
 
     const { data, isLoading, isError, error, refetch } = useQuery({
-        queryKey: ["news", category, endpoint, page, perPage],
+        queryKey: [...(queryKey ?? []), category, endpoint, page, perPage],
         queryFn: () => fetchNews({ category, page, perPage, endpoint }),
         staleTime: 5 * 60 * 1000
     })

@@ -8,18 +8,21 @@ import { IconChevronDown } from "@tabler/icons-react"
 function App() {
     const companyNews = useNewsWidget({
         category: "company",
-        perPage: 3
+        perPage: 3,
+        queryKey: ["companyNews"]
     })
 
     const businessNews = useNewsWidget({
         category: "company",
-        perPage: 3
+        perPage: 3,
+        queryKey: ["businessNews"]
     })
 
     const emptyNews = useNewsWidget({
         category: "company",
         perPage: 3,
-        endpoint: "empty"
+        endpoint: "empty",
+        queryKey: ["emptyNews"]
     })
     return (
         <div className="bg-accent flex min-h-screen flex-col gap-5.75">
